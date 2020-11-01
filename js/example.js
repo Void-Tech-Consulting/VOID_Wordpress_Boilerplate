@@ -2,7 +2,6 @@
 // Check your debug console in chrome dev tools to see if it works
 console.log("Hello World");
 jQuery(document).ready(function($) {
-         //wrapper
   $(".message-form").submit(function(e) {
     e.preventDefault();          //event
     let title = $('#message-title')[0].value;
@@ -10,7 +9,7 @@ jQuery(document).ready(function($) {
     $.post(my_ajax_obj.ajax_url, {         //POST request
         _ajax_nonce: my_ajax_obj.nonce,     //nonce
         action: "nopriv_my_tag_count",            //action
-        title:  title.value             //data
+        title:  title             //data
       }, 
       function(data) {                    //callback
         alert('success!');             //insert server response

@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
     $.post(my_ajax_obj.ajax_url, {         //POST request
         _ajax_nonce: my_ajax_obj.nonce,     //nonce
         action: "nopriv_my_tag_count",            //action
-        title:  title.value             //data
+        title:  title             //data
       }, 
       function(data) {                    //callback
         alert('success!');             //insert server response

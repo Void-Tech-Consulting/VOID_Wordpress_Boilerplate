@@ -2,7 +2,6 @@
 // Check your debug console in chrome dev tools to see if it works
 console.log("Hello World");
 jQuery(document).ready(function($) {
-         //wrapper
   $(".message-form").submit(function(e) {
     e.preventDefault();          //event
     let title = $('#message-title')[0].value;

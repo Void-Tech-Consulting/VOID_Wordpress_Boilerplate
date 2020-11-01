@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website Title</title>
+  <title>My Example Website Title</title>
 </head>
 <body>
 <!-- Example navbar -->

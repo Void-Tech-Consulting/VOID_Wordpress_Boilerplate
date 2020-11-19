@@ -25,4 +25,10 @@
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 
+<?php for ($i = 0; $i < 5; $i++) {?>
+        <div>Hello</div>
+        <div><?php echo "Awesome"?></div>
+<?php }?>
+
+
 <?php get_footer(); ?>

@@ -102,14 +102,14 @@ function onepress_sanitize_repeatable_data_field( $input, $setting ) {
 	return $data;
 }
 
-if ( ! function_exists( 'get_example_data' ) ) {
+if ( ! function_exists( 'template_data' ) ) {
 	/**
-	 * Get features data
+	 * Get's the data in the theme_mod and adds default values if necessary
 	 *
 	 * @since 1.1.4
 	 * @return array
 	 */
-	function get_example_data($section) {
+	function template_data($section, $default_fields) {
 
 		$array = get_theme_mod( $section );
 		if ( is_string( $array ) ) {
@@ -119,15 +119,27 @@ if ( ! function_exists( 'get_example_data' ) ) {
 			foreach ( $array as $k => $v ) {
 				$array[ $k ] = wp_parse_args(
 					$v,
-					array(
-						'question' => '',
-            'answer' => '',
-            'link' => ''
-					)
+					$default_fields
 				);
 			}
 		}
 		return $array;
+	}
+}
+
+if ( ! function_exists( 'get_example_data' ) ) {
+	/**
+	 * Get Example Data
+	 *
+	 * @since 1.1.4
+	 * @return array
+	 */
+	function get_example_data($section) {
+		return template_data($section, array(
+						'question' => '',
+            'answer' => '',
+            'link' => ''
+		));
 	}
 }
 ?>

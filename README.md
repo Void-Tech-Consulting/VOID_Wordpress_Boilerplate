@@ -14,5 +14,5 @@
 
 ### Must-read documentation
 
-1. https://codex.wordpress.org/Conditional_Tags
-2. 
+1. How to make almost everything editable: https://www.youtube.com/watch?v=YzNfIM_9TaM
+2. https://codex.wordpress.org/Conditional_Tags

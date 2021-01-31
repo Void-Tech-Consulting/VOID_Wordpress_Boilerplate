@@ -62,7 +62,7 @@ function example_repeatable_customizer($wp_customize) {
               'label' 		=> esc_html__('Example Q & A Repeater'),
               'description'   => '',
               'section'       => $example_section,
-              'live_title_id' => 'title', // apply for unput text and textarea only
+              'live_title_id' => 'question',
               'title_format'  => esc_html__('[live_title]'), // [live_title]
               'max_item'      => 10, // Maximum item can add
               'limited_msg' 	=> wp_kses_post( __( 'Max items added' ) ),

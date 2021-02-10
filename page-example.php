@@ -21,25 +21,19 @@
         ?>
         <section class="example">
         <?php
-          foreach ( $data as $k => $f ) {  
-            // Make sure to use a semicolon; when using php on multiple lines
-            $questionId = 'question'.$k;
-            $answerContent = "<div id=\"".$questionId."\" class=\"answer-text\">";
-            ?>
-            <div class="questionbox" <?php echo "data-question-id=\"".$k."\"" ?>> 
-              <span class="question-text"><?php echo $f['question']?> </span>
-            </div>
-            <div class="dropdown-line"></div>
-            <?php echo $answerContent ?>
-              <a href="<?php echo $f['link']; ?>">
-                <div class= "answer-wrap">
-                    <?php echo $f['answer']; ?>
-                </div>
-              </a>
-            </div>
-      <?php
+          foreach ( $data as $k => $f ) {
+            $media = '';
+            if ($f['some_image']) {
+              // get_media_url function is in template_functions.php
+              $media = '<img src="'.esc_url( get_media_url( $f['some_image'] ) ).'">';
+            }
+        ?>
+            <div><?php echo $media ?></div>
+            <div><?php echo $f['some_quote'] ?></div>
+
+    <?php
           }
-      ?>
+    ?>
         </section>
 <?php } ?>
 

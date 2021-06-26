@@ -24,6 +24,14 @@ function add_scripts() {
         )
     );
   }
+//   enqueue on all the pages
+  wp_enqueue_script(
+    "ajax-script",
+    get_theme_file_uri("/js/navbar.js"),
+    array('jquery'),
+    '1.0.0',
+    true
+  );
 }
 add_action('wp_enqueue_scripts', 'add_scripts');
 
@@ -46,5 +54,6 @@ add_action('wp_ajax_nopriv_my_tag_count', 'my_ajax_handler__json');
 function add_styles() {
   wp_enqueue_style( "style", get_stylesheet_uri());
   wp_enqueue_style( "home", get_theme_file_uri('/css/home.css'));
+  wp_enqueue_style( "header", get_theme_file_uri('/css/header.css'));
 }
 add_action('wp_enqueue_scripts', 'add_styles');
